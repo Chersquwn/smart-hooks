@@ -28,6 +28,4 @@ const createUseStorage = (storageType: string): UseStorage => {
   }
 }
 
-export const useLocalStorage = createUseStorage('localStorage')
-
-export const useSessionStorage = createUseStorage('sessionStorage')
+export default createUseStorage
