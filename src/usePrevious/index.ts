@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 
-export function usePrevious<T>(value: T): T {
+export default function usePrevious<T>(value: T): T {
   const ref = useRef(null)
 
   useEffect(() => {
