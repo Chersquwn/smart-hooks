@@ -1,7 +1,10 @@
 import { useEffect } from 'react'
 import usePrevious from '../usePrevious'
 
-export function useInterval(callback: () => void, delay: number | null): void {
+export default function useInterval(
+  callback: () => void,
+  delay: number | null
+): void {
   const savedCallback = usePrevious(callback)
   const tick = (): void => {
     savedCallback()

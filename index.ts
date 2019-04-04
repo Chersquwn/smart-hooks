@@ -1,2 +1,5 @@
-export { useDocumentTitle } from './src/documentTitle'
-export { useLocalStorage, useSessionStorage } from './src/storage'
+export { default as useDocumentTitle } from './src/useDocumentTitle'
+export { default as useInterval } from './src/useInterval'
+export { default as useLocalStorage } from './src/useLocalStorage'
+export { default as usePrevious } from './src/usePrevious'
+export { default as useSessionStorage } from './src/useSessionStorage'
