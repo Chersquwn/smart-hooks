@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-export default function useDocumentTitle(title: string): void {
+const useDocumentTitle = (title: string): void => {
   useEffect(() => {
     document.title = title
 
@@ -9,3 +9,5 @@ export default function useDocumentTitle(title: string): void {
     }
   }, [title])
 }
+
+export default useDocumentTitle

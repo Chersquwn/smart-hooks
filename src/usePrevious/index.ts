@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 
-export default function usePrevious<T>(value: T): T {
+const usePrevious = <T>(value: T): T => {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -9,3 +9,5 @@ export default function usePrevious<T>(value: T): T {
 
   return ref.current
 }
+
+export default usePrevious
