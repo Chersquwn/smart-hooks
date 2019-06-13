@@ -10,8 +10,19 @@
     "build": "microbundle",
     "dev": "microbundle watch",
     "test": "jest",
-    "lint": "eslint ./src/**/*.ts",
-    "precommit": "lint-staged"
+    "lint": "eslint src/**/*.ts"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "repository": {
     "type": "git",
