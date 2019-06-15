@@ -12,7 +12,7 @@ interface UseStorage {
 
 const createUseStorage = (storageType: string): UseStorage => {
   return (key, initialValue) => {
-    const [storeValue, setStoreValue] = useState(async () => {
+    const [storeValue, setStoreValue] = useState(() => {
       const item = window[storageType].getItem(key)
 
       return item ? JSON.parse(item) : initialValue
